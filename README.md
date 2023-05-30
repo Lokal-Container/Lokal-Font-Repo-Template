@@ -5,7 +5,7 @@ Short description of Demo Font. Read more about this [project](https://github.co
 
 ## Specimen
 
-"![LCDemoImage](./documentation/images/LCDemo.png)"
+"![filename](filename.png)"
 
 ## License
 
