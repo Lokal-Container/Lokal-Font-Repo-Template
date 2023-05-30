@@ -172,13 +172,13 @@ The dot of soft dotted characters should disappear in other cases, for example: 
 >
 >Here we check for the presence of potential interpolation errors using the fontTools.varLib.interpolatable module.
 >
-* ⚠ **WARN** Interpolation issues were found in the font: 	- Contour order differs in glyph 'ellipsis': [0, 1, 2] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b6fb0>, [2, 1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b4100>.
+* ⚠ **WARN** Interpolation issues were found in the font: 	- Contour order differs in glyph 'ellipsis': [0, 1, 2] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa60250>, [2, 1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa613c0>.
 
-	- Contour order differs in glyph 'quotedblright': [0, 1] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b6fb0>, [1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b4100>.
+	- Contour order differs in glyph 'quotedblbase': [0, 1] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa60250>, [1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa613c0>.
 
-	- Contour order differs in glyph 'quotedblleft': [0, 1] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b6fb0>, [1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b4100>. 
+	- Contour order differs in glyph 'quotedblright': [0, 1] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa60250>, [1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa613c0>. 
 
-	- Contour order differs in glyph 'quotedblbase': [0, 1] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b6fb0>, [1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1179b4100>. [code: interpolation-issues]
+	- Contour order differs in glyph 'quotedblleft': [0, 1] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa60250>, [1, 0] in <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x11aa613c0>. [code: interpolation-issues]
 </div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
 
 >
@@ -193,7 +193,7 @@ Width = 499:
 plus
 
 Width = 426:
-greater, less
+less, greater
 
 Width = 439:
 plusminus, logicalnot

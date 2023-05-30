@@ -218,7 +218,7 @@ Width = 521:
 notequal
 
 Width = 543:
-greaterequal, lessequal
+lessequal, greaterequal
  [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
