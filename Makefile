@@ -25,6 +25,13 @@ check-otf: $(OTFDIR)
 		fontbakery check-universal -l DEBUG --html $(CHECKS)/otf/fontbakery-check-$$filename.html --ghmarkdown $(CHECKS)/otf/fontbakery-check-$$filename.md $$file; \
 	done
 
+fix-fonts:
+	gftools gen-stat $(VARDIR)/*.ttf
+	for file in $(VARDIR)/*.ttf.fix; do \
+		mv $$file $${file%.fix}; \
+	done
+	
+	
 check-variable: $(VARDIR)
 	mkdir -p $(CHECKS)/variable;
 	for file in $(VARDIR)/*.ttf; do \
@@ -39,12 +46,12 @@ check-fonts:
 build: dependencies
 	. venv/bin/activate
 	mkdir -p $(TTFDIR)
-	fontmake -g "$(SOURCES)" -o ttf --output-dir $(TTFDIR) -i --flatten-components --verbose DEBUG
+	fontmake -g "$(SOURCES)" -o ttf --output-dir $(TTFDIR) -i --filter DecomposeTransformedComponentsFilter --verbose DEBUG
 	mkdir -p $(OTFDIR)
 	fontmake -g "$(SOURCES)" -o otf --output-dir $(OTFDIR) -i --verbose DEBUG
-	python3 scripts/build.py
 	mkdir -p $(VARDIR)
-	fontmake -g "$(SOURCES)" -o variable --output-dir $(VARDIR) --flatten-components
+	fontmake -g "$(SOURCES)" -o variable --output-dir $(VARDIR) --filter DecomposeTransformedComponentsFilter
+	python3 scripts/build.py
 
 clearFolder:
 	rm -rf $(TTFDIR)/*.ttf; rm -rf $(OTFDIR)/*.otf; rm -rf $(VARDIR)/*.ttf; rm -rf $(WOFF2DIR)/*.woff2
@@ -54,6 +61,7 @@ clearFolder:
 dependencies:
 	python3 -m venv venv
 	. venv/bin/activate
+	pip install --upgrade pip
 	pip install -r requirements.txt
 
 clean:

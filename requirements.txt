@@ -1,4 +1,5 @@
 fonttools
 fontmake
-fontbakery
+fontbakery[freetype]
 brotli
+gftools
